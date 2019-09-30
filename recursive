@@ -1,0 +1,40 @@
+boolean binarySearch(int[] arr, int start, int end, int key){
+
+    int mid = (start + end)/2;
+
+    if (end < start){
+    
+      return false;
+      
+    }
+    
+    if (key < arr[mid]){
+    
+      binarySearch(arr,start,mid-1,key);
+      
+    }
+    
+    if (key > arr[mid]){
+    
+       binarySearch(arr,mid+1,end,key);
+       
+    }
+    
+    if (key == arr[mid]){
+    
+       return true;
+       
+    }
+    
+    
+    return false;
+    
+    
+  }
+    
+     
+     
+
+    
+
+  
